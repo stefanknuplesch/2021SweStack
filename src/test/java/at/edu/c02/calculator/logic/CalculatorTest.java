@@ -57,6 +57,19 @@ public class CalculatorTest {
 
 	}
 
+	@Test
+	public void testSimpleModOperation() throws Exception {
+
+		Calculator calc = new CalculatorImpl();
+		calc.push(28.0);
+		calc.push(13);
+		double result = calc.perform(Operation.mod);
+
+		assertEquals(2, result);
+
+	}
+
+
 	//
 	@Test
 	public void testPopOnEmptyStack() throws Exception {
